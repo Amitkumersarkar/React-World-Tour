@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import Country from "../Country/Country";
 
 const countries = () => {
 
@@ -14,6 +15,13 @@ const countries = () => {
     return (
         <div>
             <h3>Countries : {countries.length}</h3>
+            {/* creating countries components here */}
+            {/*make it dynamic  */}
+
+            {
+                countries.map(country => <Country></Country>)
+            }
+
         </div>
     );
 };
