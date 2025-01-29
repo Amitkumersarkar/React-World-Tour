@@ -19,7 +19,7 @@ const countries = () => {
             {/*make it dynamic  */}
 
             {
-                countries.map(country => <Country></Country>)
+                countries.map(country => <Country country={country}></Country>)
             }
 
         </div>
