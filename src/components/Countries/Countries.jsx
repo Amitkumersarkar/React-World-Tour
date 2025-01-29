@@ -15,14 +15,16 @@ const countries = () => {
             .then(data => setCountries(data));
     }, [])
     return (
-        <div className="country-container">
+        <div>
             <h3>Countries : {countries.length}</h3>
             {/* creating countries components here */}
             {/*make it dynamic  */}
 
-            {
-                countries.map(country => <Country key={country.cca3} country={country}></Country>)
-            }
+            <div className="country-container">
+                {
+                    countries.map(country => <Country key={country.cca3} country={country}></Country>)
+                }
+            </div>
 
         </div>
     );
