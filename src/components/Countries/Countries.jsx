@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Country from "../Country/Country";
 
+import './Countries.css';
+
 const countries = () => {
 
     // load data using api
@@ -13,7 +15,7 @@ const countries = () => {
             .then(data => setCountries(data));
     }, [])
     return (
-        <div>
+        <div className="country-container">
             <h3>Countries : {countries.length}</h3>
             {/* creating countries components here */}
             {/*make it dynamic  */}
